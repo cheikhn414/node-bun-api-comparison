@@ -2,18 +2,27 @@
 
 This project compares performance between **Bun** and **Node.js** with two identical REST APIs.
 
+[![Bun](https://img.shields.io/badge/Built%20with-Bun-black?logo=bun)](https://bun.sh)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)](https://expressjs.com)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 ## 📁 Project Structure
 
 ```
-api-comparison/
-├── bun-api/           # API with Bun
+node-bun-api-comparison/
+├── bun-api/           # API built with Bun
 │   ├── package.json
 │   └── index.ts
-├── node-api/          # API with Node.js + Express  
+├── node-api/          # API built with Node.js + Express  
 │   ├── package.json
 │   └── index.js
-├── benchmark.js       # Benchmark script
-└── README.md
+├── benchmark.js       # Performance benchmark script
+├── test-apis.sh       # API testing script
+├── start-benchmark.sh # Automated benchmark runner
+├── README.md          # English documentation
+├── README_fr.md       # French documentation
+└── LICENSE           # MIT License
 ```
 
 ## 🛠️ Installation and Setup
@@ -33,9 +42,16 @@ npm start
 ```
 
 ### 3. Run Benchmark
+
 ```bash
-# In api-comparison folder
+# Manual benchmark
 node benchmark.js
+
+# Automated benchmark (starts both servers and runs benchmark)
+bash start-benchmark.sh
+
+# Test API endpoints
+bash test-apis.sh
 ```
 
 ## 🔌 Available Endpoints
@@ -97,7 +113,34 @@ node benchmark.js
 
 ## 🔧 Technologies Used
 
-- **Bun**: Modern JavaScript runtime
-- **Node.js**: Traditional JavaScript runtime
+- **Bun**: Modern JavaScript runtime with built-in HTTP server
+- **Node.js**: Traditional JavaScript runtime  
 - **Express**: Web framework for Node.js
 - **Native HTTP**: For performance testing
+- **TypeScript**: For Bun API implementation
+
+## 📊 Requirements
+
+- **Bun** >= 1.0.0 (for bun-api)
+- **Node.js** >= 16.0.0 (for node-api)
+- **npm** (for Node.js dependencies)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -m 'Add performance improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 🐛 Issues & Support
+
+If you encounter any bugs or have suggestions for additional benchmarks, please [open an issue](../../issues) on GitHub.
+
+## 🔗 Related Resources
+
+- [Bun Documentation](https://bun.sh/docs)
+- [Node.js Performance Guide](https://nodejs.org/en/docs/guides/simple-profiling)
+- [Express.js Documentation](https://expressjs.com)
