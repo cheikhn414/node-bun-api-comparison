@@ -1,0 +1,13 @@
+{
+  "name": "bun-api",
+  "version": "1.0.0",
+  "description": "API REST avec Bun",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.20"
+  }
+}
